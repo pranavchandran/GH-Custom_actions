@@ -5,6 +5,10 @@ inputs:
     description: 'Whether to use caching or not'
     required: false
     default: 'true'
+outputs:
+  used-cache:
+    description: 'Whether the cache was used or not'
+    value: ${{ steps.cache.outputs.cache-hit }}
 runs:
   using: 'composite'
   steps:
